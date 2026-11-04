@@ -1,0 +1,66 @@
+
+[
+    {
+        "id": 1,
+        "naziv": "Personalizirana čestitka",
+        "tip": "RUČNI RAD",
+        "opis": "Ručno izrađena, personalizirana čestitka za svaku priliku. Možete odabrati tekst, 2D ili 3D motive te dizajn prema vlastitim željama.",
+        "slika": "images/proizvodi/čestitke.jpeg",
+        "dodatne_slike": [
+            "images/proizvodi/čestitkaAnđeo.jpeg",
+            "images/proizvodi/ČestitkaKrizma.jpeg",
+            "images/proizvodi/ČestitkasNovcima.jpeg",
+            "images/proizvodi/čestitkaZaVjenčanje.jpeg",
+            "images/proizvodi/čestitkeIznutra.jpeg"
+        ],
+        "materijal": "Drvo breze",
+        "dimenzije": "20 × 15 cm"
+    },
+
+    {
+        "id": 2,
+        "naziv": "Personalizirana kutija",
+        "tip": "RUČNI RAD",
+        "opis": "Ručno izrađena, kutija za poklon. Možete odabrati tekst, gravuru te dizajn prema vlastitim željama.",
+        "slika": "images/proizvodi/Kutija8.jpeg",
+        "dodatne_slike": [
+            "images/proizvodi/Kutija1.jpeg",
+            "images/proizvodi/Kutija2.jpeg",
+            "images/proizvodi/Kutija3.jpeg",
+            "images/proizvodi/Kutija4.jpeg",
+            "images/proizvodi/Kutija5.jpeg",
+            "images/proizvodi/Kutija6.jpeg",
+            "images/proizvodi/Kutija7.jpeg",
+            "images/proizvodi/Kutija9.jpeg"
+        ],
+        "materijal": "Drvo breze",
+        "dimenzije": "Razne dimenzije"
+    },
+
+    {
+        "id": 3,
+        "naziv": "Adventski vijenac",
+        "tip": "RUČNI RAD",
+        "opis": "Ručno izrađen, adventski vijenac. Možete odabrati tekst, gravuru te dizajn prema vlastitim željama.",
+        "slika": "images/proizvodi/advent2.jpg",
+        "dodatne_slike": [
+            "images/proizvodi/advent1.jpg"
+        ],
+        "materijal": "Drvo breze",
+        "dimenzije": "Razne dimenzije"
+    },
+
+    {
+        "id": 4,
+        "naziv": "Kutija u obliku srca",
+        "tip": "RUČNI RAD",
+        "opis": "Ručno izrađen, kutija u obliku srca. Možete odabrati dizajn prema vlastitim željama.",
+        "slika": "images/proizvodi/Kutijasrce1.jpeg",
+        "dodatne_slike": [
+            "images/proizvodi/Kutijasrce2.jpeg",
+            "images/proizvodi/Kutijasrce3.jpeg"
+        ],
+        "materijal": "Drvo breze",
+        "dimenzije": "Razne dimenzije"
+    }
+]

@@ -1,0 +1,857 @@
+.products-header {
+    position: relative;
+    min-height: 300px;
+    padding: 75px 9% 65px;
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(239, 225, 195, 0.98),
+            rgba(230, 210, 167, 0.88)
+        );
+
+    overflow: hidden;
+}
+
+.products-header::before {
+    content: "";
+
+    position: absolute;
+    inset: 25px;
+
+    border: 1px solid rgba(128, 101, 67, 0.32);
+
+    pointer-events: none;
+}
+
+.products-header::after {
+    content: "";
+
+    position: absolute;
+    inset: 31px;
+
+    border: 1px solid rgba(128, 101, 67, 0.13);
+
+    pointer-events: none;
+}
+
+.products-header-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 650px;
+}
+
+.products-header-content .section-label {
+    margin-bottom: 14px;
+}
+
+.products-header h1 {
+    margin: 0;
+
+    color: var(--red);
+
+    font-family: "IM Fell English SC", serif;
+
+    font-size: clamp(48px, 6vw, 78px);
+
+    font-weight: 400;
+
+    line-height: 0.95;
+}
+
+.products-header h1 span {
+    display: block;
+
+    color: var(--red);
+}
+
+.products-header-content > p:last-child {
+    max-width: 450px;
+
+    margin: 24px 0 0;
+
+    color: var(--brown-light);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+.products-header-logo {
+    position: absolute;
+    z-index: 3;
+
+    right: 9%;
+    top: 50%;
+
+    width: 190px;
+
+    transform:
+        translateY(-50%)
+        rotate(2deg);
+
+    text-align: center;
+}
+
+.products-header-logo img {
+    display: block;
+
+    width: 100%;
+    max-height: 115px;
+
+    object-fit: contain;
+
+    margin-bottom: 13px;
+}
+
+.products-header-logo span {
+    display: block;
+
+    padding-top: 10px;
+
+    border-top: 1px solid var(--line);
+
+    color: var(--brown-light);
+
+    font-size: 7px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    white-space: nowrap;
+}
+
+.products-header-line {
+    position: absolute;
+
+    left: 9%;
+    right: 9%;
+    bottom: 0;
+
+    height: 1px;
+
+    background: rgba(128, 101, 67, 0.4);
+}
+
+.products-collection {
+    position: relative;
+
+    padding: 80px 7% 120px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(239, 225, 195, 0.95),
+            rgba(230, 210, 167, 0.8)
+        );
+}
+
+.collection-heading {
+    max-width: 1350px;
+
+    margin: 0 auto 55px;
+
+    padding-bottom: 16px;
+
+    border-bottom: 1px solid rgba(128, 101, 67, 0.4);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.collection-heading p {
+    margin: 0;
+
+    color: var(--red);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+}
+
+.collection-heading > span {
+    color: var(--brown-light);
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    opacity: 0.7;
+}
+
+.products-grid {
+    max-width: 1350px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 55px 28px;
+
+    align-items: start;
+}
+
+.product-card {
+    position: relative;
+
+    display: block;
+
+    color: inherit;
+
+    text-decoration: none;
+
+    background: var(--cream);
+
+    border: 1px solid var(--line);
+
+    padding: 10px;
+
+    box-shadow:
+        0 10px 22px rgba(48, 37, 29, 0.14),
+        0 2px 4px rgba(48, 37, 29, 0.08);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+
+    overflow: visible;
+}
+
+.product-card-paper {
+    position: relative;
+
+    background: var(--cream);
+
+    border: 1px solid rgba(128, 101, 67, 0.3);
+
+    padding: 5px;
+}
+
+.product-card-paper::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 4px;
+
+    border: 1px solid rgba(128, 101, 67, 0.16);
+
+    pointer-events: none;
+
+    z-index: 5;
+}
+
+.product-card-image {
+    position: relative;
+
+    height: 285px;
+
+    overflow: hidden;
+
+    background: var(--paper);
+
+    border: 1px solid rgba(128, 101, 67, 0.35);
+}
+
+.product-card-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    filter:
+        sepia(22%)
+        saturate(82%)
+        contrast(92%);
+
+    transition:
+        transform 0.5s ease,
+        filter 0.5s ease;
+}
+
+.product-card:hover .product-card-image img {
+    transform: scale(1.05);
+
+    filter:
+        sepia(8%)
+        saturate(95%)
+        contrast(96%);
+}
+
+.product-number {
+    position: absolute;
+
+    top: 13px;
+    left: 13px;
+
+    z-index: 6;
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: var(--cream);
+
+    border: 1px solid var(--line);
+
+    color: var(--brown);
+
+    font-family: "IM Fell English SC", serif;
+
+    font-size: 14px;
+
+    box-shadow:
+        0 3px 7px rgba(48, 37, 29, 0.18);
+}
+
+.product-card-content {
+    position: relative;
+
+    padding: 21px 10px 13px;
+}
+
+
+.product-card-type {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: var(--red);
+
+    font-size: 8px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+.product-card h3 {
+    margin: 0;
+
+    color: var(--brown);
+
+    font-family: "IM Fell English SC", serif;
+
+    font-size: 24px;
+
+    font-weight: 400;
+
+    line-height: 1.1;
+}
+
+.product-card-link {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 18px;
+
+    padding-top: 12px;
+
+    border-top: 1px solid rgba(128, 101, 67, 0.3);
+
+    color: var(--brown-light);
+
+    font-size: 8px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    opacity: 0.65;
+
+    transition:
+        color 0.3s ease,
+        opacity 0.3s ease;
+}
+
+
+.product-card-link span {
+    font-size: 17px;
+
+    line-height: 1;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.product-card:hover .product-card-link {
+    color: var(--red);
+
+    opacity: 1;
+}
+
+
+.product-card:hover .product-card-link span {
+    transform: translateX(5px);
+}
+
+.product-card-1 {
+    transform: rotate(-2.2deg);
+}
+
+
+.product-card-2 {
+    transform: rotate(1.7deg);
+}
+
+
+.product-card-3 {
+    transform: rotate(-1deg);
+}
+
+
+.product-card-4 {
+    transform: rotate(2.4deg);
+}
+
+
+.product-card-5 {
+    transform: rotate(1.5deg);
+}
+
+
+.product-card-6 {
+    transform: rotate(-2deg);
+}
+
+
+.product-card-7 {
+    transform: rotate(2.1deg);
+}
+
+
+.product-card-8 {
+    transform: rotate(-1.5deg);
+}
+
+
+/* Hover */
+
+.product-card:hover {
+    transform:
+        rotate(0deg)
+        translateY(-10px);
+
+    z-index: 10;
+
+    box-shadow:
+        0 18px 30px rgba(48, 37, 29, 0.2),
+        0 4px 8px rgba(48, 37, 29, 0.1);
+}
+
+.products-cta {
+    position: relative;
+
+    padding: 125px 9%;
+
+    background: var(--green);
+
+    overflow: hidden;
+
+    text-align: center;
+}
+
+.products-cta-frame {
+    position: absolute;
+
+    inset: 28px;
+
+    border: 1px solid rgba(239, 225, 195, 0.28);
+
+    pointer-events: none;
+}
+
+.products-cta-frame::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 9px;
+
+    border: 1px solid rgba(201, 168, 94, 0.22);
+}
+
+.products-cta-decoration {
+    position: absolute;
+
+    border: 1px solid rgba(201, 168, 94, 0.4);
+
+    transform: rotate(45deg);
+
+    pointer-events: none;
+}
+
+.products-cta-decoration-left {
+    width: 230px;
+    height: 230px;
+
+    left: -130px;
+    top: 50px;
+}
+
+.products-cta-decoration-right {
+    width: 150px;
+    height: 150px;
+
+    right: -70px;
+    bottom: 40px;
+}
+
+.products-cta-content {
+    position: relative;
+
+    z-index: 3;
+
+    max-width: 680px;
+
+    margin: 0 auto;
+}
+
+.products-cta .section-label {
+    color: var(--gold);
+}
+
+.products-cta h2 {
+    margin: 0;
+
+    color: var(--cream);
+
+    font-family: "IM Fell English SC", serif;
+
+    font-size: clamp(52px, 6vw, 78px);
+
+    font-weight: 400;
+
+    line-height: 0.95;
+}
+
+.products-cta h2 span {
+    display: block;
+
+    color: var(--gold);
+}
+
+.products-cta-content > p:not(.section-label) {
+    max-width: 500px;
+
+    margin: 30px auto;
+
+    color: rgba(239, 225, 195, 0.82);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+.products-cta-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+
+    padding: 15px 25px;
+
+    background: var(--cream);
+
+    color: var(--green);
+
+    border: 1px solid var(--gold);
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.products-cta-button span {
+    font-size: 18px;
+
+    line-height: 1;
+}
+
+.products-cta-button:hover {
+    background: var(--gold);
+
+    color: var(--brown);
+
+    transform: translateY(-3px);
+}
+
+.footer {
+    padding: 28px 7%;
+
+    background: var(--brown);
+
+    border-top: 1px solid rgba(201, 168, 94, 0.25);
+
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+
+    color: rgba(239, 225, 195, 0.65);
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+}
+
+@media (max-width: 1100px) {
+
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 50px 25px;
+    }
+
+    .product-card-image {
+        height: 300px;
+    }
+}
+
+@media (max-width: 750px) {
+
+    .products-header {
+        min-height: 0;
+
+        padding: 45px 7% 50px;
+
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        text-align: center;
+    }
+
+    .products-header::before {
+        inset: 14px;
+    }
+
+    .products-header::after {
+        inset: 19px;
+    }
+
+    .products-header-content {
+        max-width: 100%;
+
+        padding: 0;
+    }
+
+    .products-header-logo {
+        position: relative;
+
+        order: -1;
+
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: auto;
+
+        width: 92px;
+
+        margin: 0 auto 18px;
+
+        transform: none;
+    }
+
+    .products-header-logo img {
+        max-height: 88px;
+
+        margin: 0 auto;
+    }
+
+    .products-header-content .section-label {
+        margin-bottom: 10px;
+
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+    .products-header h1 {
+        font-size: clamp(40px, 12vw, 54px);
+
+        letter-spacing: 2px;
+    }
+
+    .products-header-line {
+        left: 7%;
+        right: 7%;
+    }
+
+    .products-collection {
+        padding: 45px 5% 70px;
+    }
+
+    .collection-heading {
+        margin-bottom: 32px;
+    }
+
+    .products-grid {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 24px 14px;
+    }
+
+    .products-grid .product-card:nth-child(odd) {
+    transform: rotate(-2deg);
+    }
+
+    .products-grid .product-card:nth-child(even) {
+        transform: rotate(2deg);
+    }
+
+    .products-grid .product-card:hover {
+        transform: translateY(-4px);
+    }
+
+    .product-card-paper {
+        padding: 4px;
+    }
+
+    .product-card-paper::before {
+        inset: 3px;
+    }
+
+    .product-card-image {
+        height: auto;
+
+        aspect-ratio: 1 / 1;
+    }
+
+    .product-card-image img {
+        position: absolute;
+        inset: 0;
+    }
+
+    .product-number {
+        top: 7px;
+        left: 7px;
+
+        width: 26px;
+        height: 26px;
+
+        font-size: 11px;
+    }
+
+    .product-card-content {
+        padding: 13px 4px 6px;
+    }
+
+    .product-card-type {
+        margin-bottom: 5px;
+
+        font-size: 7px;
+        letter-spacing: 1.5px;
+    }
+
+    .product-card h3 {
+        font-size: 17px;
+    }
+
+    .product-card-link {
+        margin-top: 12px;
+        padding-top: 8px;
+
+        font-size: 7px;
+        letter-spacing: 1px;
+    }
+
+    .product-card-link span {
+        font-size: 14px;
+    }
+
+    .products-cta {
+        padding: 80px 7%;
+    }
+
+    .products-cta-frame {
+        inset: 16px;
+    }
+
+    .products-cta-decoration-left {
+        width: 160px;
+        height: 160px;
+
+        left: -100px;
+    }
+
+    .products-cta-decoration-right {
+        width: 110px;
+        height: 110px;
+
+        right: -60px;
+    }
+
+    .products-cta-content > p:not(.section-label) {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .collection-heading {
+        display: block;
+    }
+
+    .collection-heading > span {
+        display: block;
+
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 340px) {
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .products-cta h2 {
+        font-size: 44px;
+    }
+}

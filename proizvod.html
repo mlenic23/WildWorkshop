@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proizvod | Divlja Radiona</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+    
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="proizvod.css">
+</head>
+<body>
+    <header class="header">
+        <div class="nav-container">
+            <nav class="navigation">
+                <a href="index.html#pocetna">Početna</a>
+                <a href="proizvodi.html">Proizvodi</a>
+                <a href="o-nama.html">O nama</a>
+                <a href="kontakt.html">Kontakt</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="product-detail">
+            <div class="product-detail-top">
+                <a href="proizvodi.html" class="back-link">← Natrag na proizvode</a>
+            </div>
+
+            <div class="product-detail-content" id="productDetail">
+                <p class="loading">Učitavanje proizvoda...</p>
+            </div>
+        </section>
+
+        <div class="gallery-toggle-container">
+            <button class="gallery-toggle-button" id="galleryToggle" type="button" aria-expanded="false" aria-controls="productGallerySection">
+                Pogledaj ostale fotografije
+                <span class="gallery-toggle-arrow">↓</span>
+            </button>
+        </div>
+
+        <section class="product-gallery-section" id="productGallerySection" hidden>
+            <div class="product-gallery" id="productGallery"></div>
+        </section>
+
+        <section class="product-contact">
+            <div class="product-contact-frame"></div>
+            <div class="product-contact-content">
+                <p class="section-label">VAŠA IDEJA</p>
+                <h2>Imate ideju za <span>ovaj proizvod?</span></h2>
+                <p>Sviđa vam se ovaj proizvod, ali biste ga htjeli prilagoditi svojim željama? Javite nam se i zajedno možemo razgovarati o vašoj ideji.</p>
+                <a href="kontakt.html" class="product-contact-button">Javite nam se <span>→</span></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Divlja Radiona</p>
+    </footer>
+
+    <div class="image-lightbox" id="imageLightbox">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Zatvori sliku">×</button>
+        <button class="lightbox-prev" id="lightboxPrev" aria-label="Prethodna slika">‹</button>
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightboxImage">
+        </div>
+        <button class="lightbox-next" id="lightboxNext" aria-label="Sljedeća slika">›</button>
+    </div>
+
+    <script src="proizvod.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const galleryToggle = document.getElementById("galleryToggle");
+            const gallerySection = document.getElementById("productGallerySection");
+
+            galleryToggle.addEventListener("click", function () {
+                const isOpen = !gallerySection.hidden;
+                gallerySection.hidden = isOpen;
+                galleryToggle.classList.toggle("open", !isOpen);
+                galleryToggle.setAttribute("aria-expanded", String(!isOpen));
+
+                galleryToggle.innerHTML = isOpen
+                    ? 'Pogledaj ostale fotografije <span class="gallery-toggle-arrow">↓</span>'
+                    : 'Sakrij fotografije <span class="gallery-toggle-arrow">↓</span>';
+
+                if (!isOpen) {
+                    gallerySection.scrollIntoView({ behavior: "smooth", block: "start" });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
