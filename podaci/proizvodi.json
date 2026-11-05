@@ -14,6 +14,7 @@
             "images/proizvodi/čestitkeIznutra.jpeg"
         ],
         "materijal": "Drvo breze",
+        "cijena": 25,
         "dimenzije": "20 × 15 cm"
     },
 
@@ -34,6 +35,7 @@
             "images/proizvodi/Kutija9.jpeg"
         ],
         "materijal": "Drvo breze",
+        "cijena": 25,
         "dimenzije": "Razne dimenzije"
     },
 
@@ -47,6 +49,7 @@
             "images/proizvodi/advent1.jpg"
         ],
         "materijal": "Drvo breze",
+        "cijena": 25,
         "dimenzije": "Razne dimenzije"
     },
 
@@ -61,6 +64,7 @@
             "images/proizvodi/Kutijasrce3.jpeg"
         ],
         "materijal": "Drvo breze",
+        "cijena": 25,
         "dimenzije": "Razne dimenzije"
     }
 ]

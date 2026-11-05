@@ -1,6 +1,3 @@
-/* =========================
-   DETALJI PROIZVODA
-========================= */
 
 .product-detail {
     position: relative;
@@ -54,8 +51,6 @@
     gap: 75px;
     align-items: center;
 }
-
-/* Glavna slika proizvoda */
 
 .product-main-image {
     position: relative;
@@ -112,8 +107,6 @@
     z-index: 4;
 }
 
-/* Informacije o proizvodu */
-
 .product-information {
     padding: 20px 10px;
 }
@@ -149,8 +142,6 @@
     line-height: 1.9;
 }
 
-/* Specifikacije */
-
 .product-specifications {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -178,11 +169,6 @@
     font-size: 20px;
     font-weight: 400;
 }
-
-
-/* =========================
-   GALERIJA PROIZVODA
-========================= */
 
 .product-gallery-section {
     position: relative;
@@ -222,12 +208,6 @@
     color: var(--red);
 }
 
-
-/* Slider raspored:
-   strelica | slika | strelica
-   broj fotografije ispod
-*/
-
 .product-gallery {
     width: 100%;
     max-width: 900px;
@@ -241,8 +221,6 @@
     box-sizing: border-box;
 }
 
-/* Prostor u kojem se prikazuje slika */
-
 .gallery-slider-stage {
     grid-column: 2;
     grid-row: 1;
@@ -250,8 +228,6 @@
     min-width: 0;
     box-sizing: border-box;
 }
-
-/* Pojedinačna fotografija */
 
 .product-gallery-item {
     display: none;
@@ -288,8 +264,6 @@
     filter: brightness(1.05);
 }
 
-/* Strelice slidera */
-
 .gallery-slider-arrow {
     grid-row: 1;
     width: 50px;
@@ -323,8 +297,6 @@
     transform: scale(1.05);
 }
 
-/* Broj fotografije ispod slike */
-
 .gallery-slider-counter {
     grid-column: 1 / -1;
     grid-row: 2;
@@ -339,11 +311,6 @@
     text-align: center;
     box-sizing: border-box;
 }
-
-
-/* =========================
-   KONTAKT
-========================= */
 
 .product-contact {
     position: relative;
@@ -431,11 +398,6 @@
     transform: translateY(-3px);
 }
 
-
-/* =========================
-   PROIZVOD NIJE PRONAĐEN
-========================= */
-
 .product-not-found {
     grid-column: 1 / -1;
     text-align: center;
@@ -468,11 +430,6 @@
     color: var(--brown-light);
     font-size: 14px;
 }
-
-
-/* =========================
-   LIGHTBOX
-========================= */
 
 .image-lightbox {
     position: fixed;
@@ -582,11 +539,6 @@ body.lightbox-open {
     overflow: hidden;
 }
 
-
-/* =========================
-   GUMB ZA OTVARANJE GALERIJE
-========================= */
-
 .gallery-toggle-container {
     display: flex;
     justify-content: center;
@@ -642,11 +594,6 @@ body.lightbox-open {
     display: none !important;
 }
 
-
-/* =========================
-   RESPONSIVE - TABLET
-========================= */
-
 @media (max-width: 900px) {
     .product-detail-content {
         grid-template-columns: 1fr;
@@ -661,11 +608,6 @@ body.lightbox-open {
         padding: 10px 0;
     }
 }
-
-
-/* =========================
-   RESPONSIVE - MOBITEL
-========================= */
 
 @media (max-width: 600px) {
     .product-detail {
@@ -696,7 +638,6 @@ body.lightbox-open {
         margin-top: 15px;
     }
 
-    /* Slider ostaje centriran na mobitelu */
     .product-gallery {
         display: grid;
         width: 100%;
@@ -776,11 +717,6 @@ body.lightbox-open {
     }
 }
 
-
-/* =========================
-   RESPONSIVE - LIGHTBOX
-========================= */
-
 @media (max-width: 700px) {
     .image-lightbox {
         padding: 25px;
@@ -812,5 +748,170 @@ body.lightbox-open {
 
     .lightbox-next {
         right: 10px;
+    }
+}
+
+.product-description-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.product-description {
+    flex: 1;
+    margin: 0;
+}
+
+.product-price {
+    flex-shrink: 0;
+    min-width: 125px;
+    padding: 16px 20px;
+    background: var(--brown);
+    border: 1px solid var(--red);
+    text-align: center;
+}
+
+.product-price span {
+    display: block;
+    color: var(--cream);
+    font-size: 9px;
+    letter-spacing: 3px;
+    margin-bottom: 7px;
+}
+
+.product-price strong {
+    color: var(--cream);
+    font-family: "IM Fell English SC", serif;
+    font-size: 27px;
+    font-weight: 400;
+}
+
+@media (max-width: 600px) {
+    .product-description-row {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+.product-specifications {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.product-specification {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+    padding: 18px 12px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.product-specification span {
+    display: block;
+    margin-bottom: 9px;
+    color: var(--red);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+.product-specification strong {
+    color: var(--brown);
+    font-family: "IM Fell English SC", serif;
+    font-size: 20px;
+    font-weight: 400;
+    overflow-wrap: anywhere;
+}
+
+.product-price {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+    padding: 18px 10px;
+
+    background: var(--brown);
+    border: 1px solid var(--red);
+    text-align: center;
+    box-shadow: 0 5px 12px rgba(48, 37, 29, 0.12);
+}
+
+.product-price::before {
+    content: "";
+    position: absolute;
+    inset: 5px;
+    border: 1px solid rgba(239, 225, 195, 0.35);
+    pointer-events: none;
+}
+
+.product-price::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 28px;
+    height: 2px;
+    background: var(--gold);
+    transform: translateX(-50%);
+}
+
+.product-price span {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--gold);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.product-price strong {
+    color: var(--cream);
+    font-family: "IM Fell English SC", serif;
+    font-size: 25px;
+    font-weight: 400;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+
+    .product-specifications {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+        margin-top: 30px;
+    }
+
+    .product-specification {
+        padding: 14px 5px;
+    }
+
+    .product-specification span {
+        font-size: 7px;
+        letter-spacing: 1px;
+    }
+
+    .product-specification strong {
+        font-size: 16px;
+    }
+
+    .product-price {
+        padding: 14px 5px;
+    }
+
+    .product-price span {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .product-price strong {
+        font-size: 19px;
     }
 }

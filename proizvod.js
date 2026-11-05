@@ -82,9 +82,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     <div class="product-detail-line"></div>
 
-                    <p class="product-description">
-                        ${product.opis}
-                    </p>
+                    <div class="product-description-row">
+                        <p class="product-description">
+                            ${product.opis}
+                        </p>
+                    </div>
 
                     <div class="product-specifications">
 
@@ -96,6 +98,18 @@ document.addEventListener("DOMContentLoaded", function () {
                         <div class="product-specification">
                             <span>DIMENZIJE</span>
                             <strong>${product.dimenzije}</strong>
+                        </div>
+
+                        <div class="product-price">
+                            <span>CIJENA</span>
+                            <strong>
+                                ${product.cijena != null && product.cijena !== "" && product.cijena !== "None"
+                                    ? Number(product.cijena).toLocaleString("hr-HR", {
+                                        minimumFractionDigits: 2,
+                                        maximumFractionDigits: 2
+                                    }) + " €"
+                                    : "Na upit"}
+                            </strong>
                         </div>
 
                     </div>
