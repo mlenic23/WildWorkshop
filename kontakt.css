@@ -570,3 +570,13 @@
     letter-spacing: 0.5px;
     margin-left: 5px;
 }
+
+::selection {
+    background-color: #a67c52; 
+    color: #1e1712; 
+}
+
+::-moz-selection {
+    background-color: #a67c52;
+    color: #1e1712;
+}
