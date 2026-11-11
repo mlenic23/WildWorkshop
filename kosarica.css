@@ -1,0 +1,380 @@
+
+
+.cart-page {
+    min-height: 70vh;
+    padding: 80px 7% 110px;
+    background: linear-gradient(
+        135deg,
+        rgba(239, 225, 195, 0.98),
+        rgba(230, 210, 167, 0.88)
+    );
+}
+
+.cart-heading {
+    max-width: 1250px;
+    margin: 0 auto 65px;
+    text-align: center;
+}
+
+.cart-heading h1 {
+    margin: 15px 0;
+    color: var(--brown);
+    font-family: "IM Fell English SC", serif;
+    font-size: clamp(48px, 6vw, 75px);
+    font-weight: 400;
+}
+
+.cart-heading h1 span {
+    color: var(--red);
+}
+
+.cart-heading > p:last-child {
+    max-width: 600px;
+    margin: 20px auto 0;
+    color: var(--brown-light);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.cart-content {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 55px;
+    max-width: 1250px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+.cart-section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--line);
+}
+
+.cart-section-heading h2,
+.cart-form-section h2 {
+    margin: 0;
+    color: var(--brown);
+    font-family: "IM Fell English SC", serif;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.cart-section-heading span {
+    color: var(--brown-light);
+    font-size: 11px;
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: 150px minmax(0, 1fr);
+    gap: 25px;
+    padding: 25px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.cart-item-image {
+    width: 150px;
+    height: 180px;
+    padding: 6px;
+    object-fit: cover;
+    background: var(--cream);
+    border: 1px solid var(--line);
+}
+
+.cart-item-content {
+    min-width: 0;
+}
+
+.cart-item-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.cart-item-type {
+    margin: 0 0 8px;
+    color: var(--red);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.cart-item-top h3 {
+    margin: 0;
+    color: var(--brown);
+    font-family: "IM Fell English SC", serif;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.remove-cart-item {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    background: transparent;
+    color: var(--red);
+    border: 1px solid var(--line);
+    font-size: 23px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.remove-cart-item:hover {
+    background: var(--red);
+    color: var(--cream);
+}
+
+.cart-item-price {
+    margin: 12px 0;
+    color: var(--brown);
+    font-family: "IM Fell English SC", serif;
+    font-size: 20px;
+}
+
+.cart-item-price span {
+    color: var(--brown-light);
+    font-family: "DM Sans", sans-serif;
+    font-size: 10px;
+}
+
+.cart-item-options label,
+.cart-note-label {
+    display: block;
+    color: var(--brown-light);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.cart-item-options input {
+    display: block;
+    width: 75px;
+    margin-top: 8px;
+    padding: 9px;
+    background: var(--cream);
+    color: var(--brown);
+    border: 1px solid var(--line);
+    font-family: "DM Sans", sans-serif;
+}
+
+.cart-note-label {
+    margin-top: 18px;
+}
+
+.cart-note-label textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 8px;
+    padding: 12px;
+    resize: vertical;
+    background: rgba(239, 225, 195, 0.6);
+    color: var(--brown);
+    border: 1px solid var(--line);
+    font-family: "DM Sans", sans-serif;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.cart-note-label textarea:focus,
+.cart-item-options input:focus {
+    outline: 1px solid var(--red);
+}
+
+.empty-cart {
+    padding: 65px 20px;
+    text-align: center;
+}
+
+.empty-cart h3 {
+    color: var(--brown);
+    font-family: "IM Fell English SC", serif;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.empty-cart p {
+    color: var(--brown-light);
+    font-size: 13px;
+}
+
+.empty-cart a {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--red);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.cart-form-section {
+    padding: 35px;
+    background: var(--green);
+    border: 1px solid var(--gold);
+    box-shadow: 0 12px 30px rgba(48, 37, 29, 0.13);
+}
+
+.cart-form-section .section-label {
+    color: var(--gold);
+}
+
+.cart-form-section h2 {
+    color: var(--cream);
+    font-size: 40px;
+}
+
+.cart-form-section h2 span {
+    color: var(--gold);
+}
+
+.cart-form-intro {
+    margin: 18px 0 28px;
+    color: rgba(239, 225, 195, 0.8);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--cream);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.form-group input,
+.form-group textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    background: rgba(239, 225, 195, 0.95);
+    color: var(--brown);
+    border: 1px solid var(--gold);
+    font-family: "DM Sans", sans-serif;
+    font-size: 12px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    line-height: 1.6;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: 1px solid var(--gold);
+}
+
+.send-quote-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    padding: 16px;
+    background: var(--cream);
+    color: var(--green);
+    border: 1px solid var(--gold);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.send-quote-button:hover {
+    background: var(--gold);
+    color: var(--brown);
+    transform: translateY(-2px);
+}
+
+.send-quote-button span {
+    font-size: 18px;
+}
+
+.form-required-note {
+    color: rgba(239, 225, 195, 0.65);
+    font-size: 10px;
+}
+
+.form-message {
+    color: var(--gold);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.form-message.success {
+    color: #d8e8c4;
+}
+
+.form-message.error {
+    color: #ffb6a8;
+}
+
+@media (max-width: 950px) {
+    .cart-content {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .cart-form-section {
+        max-width: 650px;
+    }
+}
+
+@media (max-width: 600px) {
+    .cart-page {
+        padding: 55px 6% 80px;
+    }
+
+    .cart-heading {
+        margin-bottom: 40px;
+    }
+
+    .cart-item {
+        grid-template-columns: 105px minmax(0, 1fr);
+        gap: 14px;
+    }
+
+    .cart-item-image {
+        width: 105px;
+        height: 135px;
+    }
+
+    .cart-item-top h3 {
+        font-size: 20px;
+    }
+
+    .cart-item-price {
+        font-size: 18px;
+    }
+
+    .cart-form-section {
+        padding: 25px 18px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}

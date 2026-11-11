@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Moja ponuda | Divlja Radiona</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="kosarica.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="nav-container">
+            <nav class="navigation">
+                <a href="index.html">Početna</a>
+                <a href="proizvodi.html">Proizvodi</a>
+                <a href="o-nama.html">O nama</a>
+                <a href="kontakt.html">Kontakt</a>
+
+                <a href="kosarica.html" class="cart-nav-link" aria-label="Otvori košaricu">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M3 3h2l2.2 11.2a2 2 0 0 0 2 1.6h8.9a2 2 0 0 0 2-1.6L22 7H6"
+                            fill="none" stroke="currentColor" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="10" cy="20" r="1.4" fill="currentColor"/>
+                        <circle cx="18" cy="20" r="1.4" fill="currentColor"/>
+                    </svg>
+
+                    <span id="cartCount" class="cart-count" hidden>0</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="cart-page">
+
+        <section class="cart-heading">
+            <h1>Vaša <span>ponuda</span></h1>
+            <p>Odaberite proizvode koje želite prilagoditi svojim željama i pošaljite nam zajednički upit.</p>
+        </section>
+
+        <section class="cart-content">
+
+            <div class="cart-products">
+                <div class="cart-section-heading">
+                    <h2>Odabrani proizvodi</h2>
+                    <span id="cartProductCount">0 proizvoda</span>
+                </div>
+
+                <div id="cartItems"></div>
+            </div>
+
+            <aside class="cart-form-section">
+
+                <p class="section-label">VAŠI PODACI</p>
+                <h2>Pošaljite <span>upit</span></h2>
+
+                <p class="cart-form-intro">
+                    Ispunite podatke kako bismo vas mogli kontaktirati
+                    i dogovoriti detalje vaše narudžbe.
+                </p>
+
+                <form id="quoteForm">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="ime">Ime *</label>
+                            <input type="text" id="ime" name="ime" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="prezime">Prezime *</label>
+                            <input type="text" id="prezime" name="prezime" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefon">Broj mobitela *</label>
+                        <input type="tel" id="telefon" name="telefon" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="opcenitaNapomena">Dodatne informacije</label>
+                        <textarea
+                            id="opcenitaNapomena"
+                            name="opcenitaNapomena"
+                            rows="4"
+                            placeholder="Ovdje možete napisati dodatne informacije za cijelu ponudu..."
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="send-quote-button">
+                        Pošalji upit <span>→</span>
+                    </button>
+
+                    <p class="form-required-note">* Obavezna polja</p>
+
+                    <p id="formMessage" class="form-message"></p>
+
+                </form>
+
+            </aside>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Divlja Radiona</p>
+    </footer>
+
+    <script src="kosarica-zajednicko.js"></script>
+    <script src="kosarica.js"></script>
+
+</body>
+</html>

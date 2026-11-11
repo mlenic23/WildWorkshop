@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
     
+    <link rel="canonical" href="https://www.divljaradiona.com/proizvod.html">
+
     <link rel="icon" type="image/png" href="images/logo.png">
 
     <link rel="stylesheet" href="style.css">
@@ -21,7 +23,20 @@
                 <a href="index.html">Početna</a>
                 <a href="proizvodi.html">Proizvodi</a>
                 <a href="o-nama.html">O nama</a>
-                <a href="kontakt.html">Kontakt</a>
+                <a href="kontakt.html">Kontakt</a>a
+
+                <a href="kosarica.html" class="cart-nav-link" aria-label="Otvori košaricu">
+                    <icon-placeholder></icon-placeholder>
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M3 3h2l2.2 11.2a2 2 0 0 0 2 1.6h8.9a2 2 0 0 0 2-1.6L22 7H6"
+                            fill="none" stroke="currentColor" stroke-width="1.8"
+                            stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="10" cy="20" r="1.4" fill="currentColor"/>
+                        <circle cx="18" cy="20" r="1.4" fill="currentColor"/>
+                    </svg>
+
+                    <span id="cartCount" class="cart-count" hidden>0</span>
+                </a>
             </nav>
         </div>
     </header>
@@ -37,25 +52,6 @@
             </div>
         </section>
 
-        <div class="gallery-toggle-container">
-            <button class="gallery-toggle-button" id="galleryToggle" type="button" aria-expanded="false" aria-controls="productGallerySection">
-                Pogledaj ostale fotografije
-                <span class="gallery-toggle-arrow">↓</span>
-            </button>
-        </div>
-
-        <section class="product-gallery-section" id="productGallerySection" hidden>
-            <div class="product-gallery" id="productGallery"></div>
-        </section>
-
-        <section class="product-contact">
-            <div class="product-contact-frame"></div>
-            <div class="product-contact-content">
-                <p class="section-label">VAŠA IDEJA</p>
-                <h2>Imate ideju za <span>ovaj proizvod?</span></h2>
-                <p>Sviđa vam se ovaj proizvod, ali biste ga htjeli prilagoditi svojim željama? Javite nam se i zajedno možemo razgovarati o vašoj ideji.</p>
-                <a href="kontakt.html" class="product-contact-button">Javite nam se <span>→</span></a>
-            </div>
         </section>
     </main>
 
@@ -72,27 +68,7 @@
         <button class="lightbox-next" id="lightboxNext" aria-label="Sljedeća slika">›</button>
     </div>
 
+    <script src="kosarica-zajednicko.js"></script>
     <script src="proizvod.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const galleryToggle = document.getElementById("galleryToggle");
-            const gallerySection = document.getElementById("productGallerySection");
-
-            galleryToggle.addEventListener("click", function () {
-                const isOpen = !gallerySection.hidden;
-                gallerySection.hidden = isOpen;
-                galleryToggle.classList.toggle("open", !isOpen);
-                galleryToggle.setAttribute("aria-expanded", String(!isOpen));
-
-                galleryToggle.innerHTML = isOpen
-                    ? 'Pogledaj ostale fotografije <span class="gallery-toggle-arrow">↓</span>'
-                    : 'Sakrij fotografije <span class="gallery-toggle-arrow">↓</span>';
-
-                if (!isOpen) {
-                    gallerySection.scrollIntoView({ behavior: "smooth", block: "start" });
-                }
-            });
-        });
-    </script>
 </body>
 </html>
