@@ -1088,3 +1088,41 @@ body {
         height: 23px;
     }
 }
+
+@media (max-width: 600px) {
+
+    .nav-container {
+        width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .navigation a {
+        white-space: nowrap;
+        font-size: 12px;
+    }
+
+    .navigation .cart-nav-link {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-left: auto;
+    }
+
+    .cart-nav-link svg {
+        width: 22px;
+        height: 22px;
+    }
+}

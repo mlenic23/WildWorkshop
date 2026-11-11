@@ -21,12 +21,12 @@ function azurirajBrojKosarice() {
     const kosarica = dohvatiKosaricu();
 
     const brojProizvoda = kosarica.reduce(
-        (ukupno, proizvod) => ukupno + proizvod.kolicina,
+        (ukupno, proizvod) => ukupno + Number(proizvod.kolicina || 0),
         0
     );
 
     cartCount.textContent = brojProizvoda;
-    cartCount.hidden = brojProizvoda === 0;
+    cartCount.hidden = false;
 }
 
 window.dohvatiKosaricu = dohvatiKosaricu;
